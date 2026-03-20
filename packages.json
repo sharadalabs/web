@@ -15,7 +15,7 @@
       "Liver Function Test (LFT)",
       "Kidney Function Test (KFT)"
     ],
-    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform?usp=publish-editor"
+    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
   },
   {
     "id": "full-body-advanced",
@@ -34,7 +34,7 @@
       "Iron Studies",
       "Chest X-Ray"
     ],
-    "bookingFormUrl": "https://forms.google.com/REPLACE_FULL_BODY_ADVANCED"
+    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
   },
   {
     "id": "diabetes-care",
@@ -51,7 +51,7 @@
       "Urine Microalbumin",
       "Lipid Profile"
     ],
-    "bookingFormUrl": "https://forms.google.com/REPLACE_DIABETES_CARE"
+    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
   },
   {
     "id": "thyroid-hormones",
@@ -68,7 +68,7 @@
       "Prolactin",
       "Testosterone / Estrogen"
     ],
-    "bookingFormUrl": "https://forms.google.com/REPLACE_THYROID_HORMONES"
+    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
   },
   {
     "id": "heart-health",
@@ -86,7 +86,7 @@
       "Blood Pressure Screening",
       "Blood Sugar"
     ],
-    "bookingFormUrl": "https://forms.google.com/REPLACE_HEART_HEALTH"
+    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
   },
   {
     "id": "womens-wellness",
@@ -104,7 +104,7 @@
       "FSH, LH, Prolactin",
       "Pap Smear (optional)"
     ],
-    "bookingFormUrl": "https://forms.google.com/REPLACE_WOMENS_WELLNESS"
+    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
   },
   {
     "id": "senior-citizen",
@@ -122,7 +122,7 @@
       "Bone Profile (Calcium)",
       "PSA / CA-125 (optional)"
     ],
-    "bookingFormUrl": "https://forms.google.com/REPLACE_SENIOR_CITIZEN"
+    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
   },
   {
     "id": "pre-employment",
@@ -140,7 +140,7 @@
       "Chest X-Ray",
       "Eye & BP Screening"
     ],
-    "bookingFormUrl": "https://forms.google.com/REPLACE_PRE_EMPLOYMENT"
+    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
   },
   {
     "id": "individual-tests",
@@ -159,6 +159,6 @@
       "Urine Routine – ₹100",
       "& many more…"
     ],
-    "bookingFormUrl": "https://forms.google.com/REPLACE_INDIVIDUAL_TESTS"
+    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
   }
 ]
