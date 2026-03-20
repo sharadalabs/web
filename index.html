@@ -27,7 +27,7 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
-    /* NAV */
+    /* ── NAV ── */
     nav {
       position: sticky; top: 0; z-index: 100;
       background: rgba(247,245,240,0.93);
@@ -45,7 +45,7 @@
     .nav-cta { background: var(--green); color: white; border: none; padding: 9px 20px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.15s; }
     .nav-cta:hover { background: var(--green-mid); transform: translateY(-1px); }
 
-    /* HERO */
+    /* ── HERO ── */
     .hero { padding: 56px 24px 48px; text-align: center; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, #d4ede0 0%, transparent 70%); z-index: 0; }
     .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--gold-light); border: 1px solid #e8c56a; color: #9a6e0e; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 14px; border-radius: 50px; margin-bottom: 20px; position: relative; z-index: 1; }
@@ -58,23 +58,22 @@
     .btn-outline { background: transparent; color: var(--green); border: 2px solid var(--green); padding: 12px 24px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
     .btn-outline:hover { background: var(--green-light); }
 
-    /* TRUST STRIP */
+    /* ── TRUST STRIP ── */
     .trust-strip { display: flex; justify-content: center; flex-wrap: wrap; padding: 0 16px 40px; }
     .trust-item { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 16px 24px; text-align: center; border-right: 1px solid var(--border); }
     .trust-item:last-child { border-right: none; }
     .trust-num { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--green); }
     .trust-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
 
-    /* SECTION */
+    /* ── SECTION ── */
     .section { padding: 40px 20px 48px; }
     .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
     .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 5vw, 2.1rem); color: var(--green); margin-bottom: 8px; line-height: 1.25; }
     .section-sub { font-size: 0.95rem; color: var(--muted); line-height: 1.6; margin-bottom: 32px; max-width: 500px; }
 
-    /* PACKAGES */
+    /* ── PACKAGES ── */
     #packages { background: var(--surface); }
 
-    /* Skeleton */
     .packages-loading { display: grid; grid-template-columns: 1fr; gap: 16px; }
     @media (min-width: 600px) { .packages-loading { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 900px) { .packages-loading { grid-template-columns: repeat(3, 1fr); } }
@@ -85,7 +84,6 @@
     .skeleton-icon { width: 44px; height: 44px; background: #e8e4dd; border-radius: 12px; animation: shimmer 1.4s infinite; }
     @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
-    /* Package grid */
     .packages-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
     @media (min-width: 600px) { .packages-grid { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 900px) { .packages-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -108,12 +106,11 @@
     .btn-book { background: var(--green); color: white; border: none; padding: 9px 18px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
     .btn-book:hover { background: var(--green-mid); transform: scale(1.04); }
 
-    /* Error */
     .packages-error { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 0.95rem; }
     .packages-error strong { display: block; font-size: 1.1rem; color: var(--text); margin-bottom: 8px; }
     .packages-error code { background: var(--bg); padding: 2px 6px; border-radius: 4px; font-size: 0.88rem; }
 
-    /* WHY US */
+    /* ── WHY US ── */
     #why { background: var(--bg); }
     .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     @media (min-width: 700px) { .why-grid { grid-template-columns: repeat(4, 1fr); } }
@@ -122,7 +119,7 @@
     .why-title { font-weight: 600; font-size: 0.88rem; color: var(--text); }
     .why-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
 
-    /* CONTACT */
+    /* ── CONTACT ── */
     #contact { background: var(--green); color: white; padding: 48px 24px; text-align: center; }
     #contact .section-label { color: #8ec9a7; }
     #contact .section-title { color: white; }
@@ -134,16 +131,108 @@
     .contact-card-label { font-size: 0.72rem; opacity: 0.7; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.06em; }
     .contact-card-value { font-weight: 600; font-size: 0.92rem; }
 
-    /* FOOTER */
+    /* ── FOOTER ── */
     footer { background: #111; color: rgba(255,255,255,0.5); text-align: center; padding: 20px; font-size: 0.78rem; }
     footer strong { color: rgba(255,255,255,0.8); }
 
-    /* FLOATING BUTTON */
-    .float-book { display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 200; background: var(--green); color: white; padding: 14px 36px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; text-decoration: none; box-shadow: 0 8px 28px rgba(26,92,58,0.45); white-space: nowrap; animation: bounce-in 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.8s both; }
+    /* ── FLOATING BUTTON ── */
+    .float-book { display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 200; background: var(--green); color: white; padding: 14px 36px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; text-decoration: none; box-shadow: 0 8px 28px rgba(26,92,58,0.45); white-space: nowrap; animation: bounce-in 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.8s both; cursor: pointer; border: none; }
     @keyframes bounce-in { from { opacity: 0; transform: translateX(-50%) translateY(30px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
     @media (max-width: 640px) { .float-book { display: block; } }
 
-    /* ANIMATIONS */
+    /* ── MODAL ── */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(10, 30, 18, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex; align-items: flex-end; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    @media (min-width: 640px) {
+      .modal-overlay { align-items: center; }
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+
+    .modal {
+      background: var(--surface);
+      width: 100%;
+      max-width: 560px;
+      border-radius: 24px 24px 0 0;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      max-height: 92vh;
+      transform: translateY(40px);
+      transition: transform 0.3s cubic-bezier(0.34, 1.2, 0.64, 1);
+      box-shadow: 0 -8px 48px rgba(0,0,0,0.18);
+    }
+    @media (min-width: 640px) {
+      .modal { border-radius: 24px; max-height: 88vh; transform: translateY(20px) scale(0.97); }
+    }
+    .modal-overlay.open .modal { transform: translateY(0) scale(1); }
+
+    .modal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 20px 14px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .modal-header-left { display: flex; align-items: center; gap: 12px; }
+    .modal-pkg-icon { font-size: 1.5rem; width: 44px; height: 44px; background: var(--green-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+    .modal-pkg-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--green); font-weight: 600; line-height: 1.2; }
+    .modal-pkg-sub { font-size: 0.75rem; color: var(--muted); margin-top: 1px; }
+
+    .modal-close {
+      width: 34px; height: 34px;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 1rem; color: var(--muted);
+      transition: background 0.15s, color 0.15s;
+      flex-shrink: 0;
+    }
+    .modal-close:hover { background: #f0e8e0; color: var(--text); }
+
+    /* Iframe loading state */
+    .modal-body {
+      flex: 1; overflow: hidden; position: relative;
+      min-height: 300px;
+    }
+
+    .modal-loader {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 14px; background: var(--surface); z-index: 2;
+      transition: opacity 0.3s;
+    }
+    .modal-loader.hidden { opacity: 0; pointer-events: none; }
+
+    .spinner {
+      width: 36px; height: 36px;
+      border: 3px solid var(--green-light);
+      border-top-color: var(--green);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .modal-loader p { font-size: 0.85rem; color: var(--muted); }
+
+    .modal-iframe {
+      width: 100%; height: 100%;
+      border: none;
+      display: block;
+      min-height: 480px;
+    }
+
+    /* No-form fallback */
+    .modal-no-form {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 12px; padding: 40px 24px; text-align: center;
+    }
+    .modal-no-form .big-icon { font-size: 2.5rem; }
+    .modal-no-form p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+    .modal-no-form code { background: var(--bg); padding: 2px 8px; border-radius: 6px; font-size: 0.82rem; color: var(--green); }
+
+    /* ── ANIMATIONS ── */
     .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
     @media (prefers-reduced-motion: reduce) { .fade-up { opacity: 1; transform: none; transition: none; } }
@@ -192,20 +281,15 @@
     <div class="section-title">Choose Your Package</div>
     <p class="section-sub">Comprehensive health checkup packages at affordable prices. All tests performed in our state-of-the-art lab.</p>
 
-    <!-- Skeleton loader -->
     <div class="packages-loading" id="packages-loading">
       <div class="skeleton-card"><div class="skeleton-icon"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
       <div class="skeleton-card"><div class="skeleton-icon"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
       <div class="skeleton-card"><div class="skeleton-icon"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
     </div>
-
-    <!-- Rendered grid -->
     <div class="packages-grid" id="packages-grid" style="display:none;"></div>
-
-    <!-- Error state -->
     <div class="packages-error" id="packages-error" style="display:none;">
       <strong>⚠️ Couldn't load packages</strong>
-      Make sure <code>packages.json</code> is in the same folder as <code>index.html</code> and you're running via a server (not opening the file directly).
+      Make sure <code>packages.json</code> is in the same folder as <code>index.html</code>.
     </div>
   </section>
 
@@ -254,10 +338,105 @@
   </footer>
 
   <!-- FLOATING BUTTON (mobile) -->
-  <a class="float-book" href="#packages">📅 Book Appointment</a>
+  <button class="float-book" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">
+    📅 Book Appointment
+  </button>
+
+  <!-- ── BOOKING MODAL ── -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-pkg-name">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <div class="modal-pkg-icon" id="modal-pkg-icon">🧪</div>
+          <div>
+            <div class="modal-pkg-name" id="modal-pkg-name">Book Appointment</div>
+            <div class="modal-pkg-sub" id="modal-pkg-sub">Fill in your details below</div>
+          </div>
+        </div>
+        <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Spinner shown while iframe loads -->
+        <div class="modal-loader" id="modal-loader">
+          <div class="spinner"></div>
+          <p>Loading booking form…</p>
+        </div>
+        <!-- iframe injected by JS -->
+      </div>
+    </div>
+  </div>
 
   <script>
-    // ── Load & render packages from packages.json ─────────────────────
+    // ── Modal state ───────────────────────────────────────────────────
+    const overlay   = document.getElementById('modal-overlay');
+    const modalBody = document.getElementById('modal-body');
+    const loader    = document.getElementById('modal-loader');
+    const closeBtn  = document.getElementById('modal-close');
+
+    function openModal(pkg) {
+      // Set header info
+      document.getElementById('modal-pkg-icon').textContent = pkg.icon || '🧪';
+      document.getElementById('modal-pkg-name').textContent = pkg.name;
+      document.getElementById('modal-pkg-sub').textContent  =
+        pkg.priceLabel
+          ? pkg.priceLabel
+          : `₹${Number(pkg.price).toLocaleString('en-IN')} / person`;
+
+      // Clear previous iframe
+      const old = modalBody.querySelector('iframe, .modal-no-form');
+      if (old) old.remove();
+      loader.classList.remove('hidden');
+
+      const url = pkg.bookingFormUrl || '';
+
+      if (!url || url.includes('REPLACE_')) {
+        // No real URL configured yet — show friendly message
+        loader.classList.add('hidden');
+        const msg = document.createElement('div');
+        msg.className = 'modal-no-form';
+        msg.innerHTML = `
+          <div class="big-icon">📋</div>
+          <p><strong>Form not configured yet.</strong><br>
+          Open <code>packages.json</code> and set the<br>
+          <code>bookingFormUrl</code> for <strong>${escHtml(pkg.name)}</strong>.</p>`;
+        modalBody.appendChild(msg);
+      } else {
+        // Embed the Google Form in an iframe
+        // Google Forms needs ?embedded=true to render cleanly in iframes
+        const embedUrl = url.includes('?')
+          ? url + '&embedded=true'
+          : url + '?embedded=true';
+
+        const iframe = document.createElement('iframe');
+        iframe.className    = 'modal-iframe';
+        iframe.src          = embedUrl;
+        iframe.title        = `Book ${pkg.name}`;
+        iframe.allow        = 'camera; microphone';
+        iframe.onload       = () => loader.classList.add('hidden');
+        modalBody.appendChild(iframe);
+      }
+
+      // Show overlay
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      // Small delay before clearing so animation completes
+      setTimeout(() => {
+        const old = modalBody.querySelector('iframe, .modal-no-form');
+        if (old) old.remove();
+        loader.classList.remove('hidden');
+      }, 300);
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    // ── Load & render packages ────────────────────────────────────────
     async function loadPackages() {
       try {
         const res = await fetch('packages.json');
@@ -266,7 +445,7 @@
         renderPackages(packages);
       } catch (err) {
         document.getElementById('packages-loading').style.display = 'none';
-        document.getElementById('packages-error').style.display = 'block';
+        document.getElementById('packages-error').style.display   = 'block';
         console.error('packages.json load error:', err);
       }
     }
@@ -275,19 +454,13 @@
       const grid   = document.getElementById('packages-grid');
       const loader = document.getElementById('packages-loading');
 
-      grid.innerHTML = packages.map(pkg => {
-        // Price display: use custom priceLabel if set, else auto-format
+      grid.innerHTML = packages.map((pkg, idx) => {
         const priceHtml = pkg.priceLabel
           ? pkg.priceLabel
           : `₹${Number(pkg.price).toLocaleString('en-IN')} <span>/ person</span>`;
-
         const badgeHtml = pkg.badge
-          ? `<div class="package-badge">${escHtml(pkg.badge)}</div>`
-          : '';
-
-        const testsHtml = (pkg.tests || [])
-          .map(t => `<li>${escHtml(t)}</li>`)
-          .join('');
+          ? `<div class="package-badge">${escHtml(pkg.badge)}</div>` : '';
+        const testsHtml = (pkg.tests || []).map(t => `<li>${escHtml(t)}</li>`).join('');
 
         return `
           <div class="package-card ${pkg.featured ? 'featured' : ''} fade-up">
@@ -298,32 +471,31 @@
             <ul class="package-tests">${testsHtml}</ul>
             <div class="package-footer">
               <div class="package-price">${priceHtml}</div>
-              <a class="btn-book"
-                 href="${escAttr(pkg.bookingFormUrl)}"
-                 target="_blank"
-                 rel="noopener noreferrer">Book</a>
+              <button class="btn-book" data-idx="${idx}">Book</button>
             </div>
           </div>`;
       }).join('');
 
+      // Single event listener via delegation
+      grid.addEventListener('click', (e) => {
+        const btn = e.target.closest('.btn-book');
+        if (!btn) return;
+        const pkg = packages[parseInt(btn.dataset.idx, 10)];
+        if (pkg) openModal(pkg);
+      });
+
       loader.style.display = 'none';
       grid.style.display   = 'grid';
-
-      // Trigger animations on the newly added cards
       observeFadeUps();
     }
 
     // ── Helpers ───────────────────────────────────────────────────────
     function escHtml(str) {
       return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
-    function escAttr(str) { return String(str).replace(/"/g, '&quot;'); }
 
-    // ── Intersection observer for fade-up animations ──────────────────
     function observeFadeUps() {
       const io = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {
@@ -333,11 +505,9 @@
           }
         });
       }, { threshold: 0.08 });
-
       document.querySelectorAll('.fade-up:not(.visible)').forEach(el => io.observe(el));
     }
 
-    // ── Init ──────────────────────────────────────────────────────────
     loadPackages();
     observeFadeUps();
   </script>
