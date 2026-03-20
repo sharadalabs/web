@@ -14,8 +14,7 @@
       "Lipid Profile",
       "Liver Function Test (LFT)",
       "Kidney Function Test (KFT)"
-    ],
-    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
+    ]
   },
   {
     "id": "full-body-advanced",
@@ -33,8 +32,7 @@
       "Uric Acid",
       "Iron Studies",
       "Chest X-Ray"
-    ],
-    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
+    ]
   },
   {
     "id": "diabetes-care",
@@ -50,8 +48,7 @@
       "Kidney Function Test",
       "Urine Microalbumin",
       "Lipid Profile"
-    ],
-    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
+    ]
   },
   {
     "id": "thyroid-hormones",
@@ -67,8 +64,7 @@
       "FSH & LH",
       "Prolactin",
       "Testosterone / Estrogen"
-    ],
-    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
+    ]
   },
   {
     "id": "heart-health",
@@ -85,8 +81,7 @@
       "ECG",
       "Blood Pressure Screening",
       "Blood Sugar"
-    ],
-    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
+    ]
   },
   {
     "id": "womens-wellness",
@@ -103,8 +98,7 @@
       "Iron Studies (Ferritin)",
       "FSH, LH, Prolactin",
       "Pap Smear (optional)"
-    ],
-    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
+    ]
   },
   {
     "id": "senior-citizen",
@@ -121,8 +115,7 @@
       "Vitamin D & B12",
       "Bone Profile (Calcium)",
       "PSA / CA-125 (optional)"
-    ],
-    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
+    ]
   },
   {
     "id": "pre-employment",
@@ -139,8 +132,7 @@
       "Urine Routine",
       "Chest X-Ray",
       "Eye & BP Screening"
-    ],
-    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
+    ]
   },
   {
     "id": "individual-tests",
@@ -158,7 +150,160 @@
       "Thyroid (TSH) – ₹250",
       "Urine Routine – ₹100",
       "& many more…"
-    ],
-    "bookingFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform"
+    ]
+  }
+][
+  {
+    "id": "full-body-basic",
+    "name": "Full Body Basic",
+    "icon": "🩺",
+    "description": "Essential health screening for overall wellness monitoring.",
+    "price": 799,
+    "featured": false,
+    "badge": null,
+    "tests": [
+      "Complete Blood Count (CBC)",
+      "Blood Sugar (Fasting & PP)",
+      "Urine Routine",
+      "Lipid Profile",
+      "Liver Function Test (LFT)",
+      "Kidney Function Test (KFT)"
+    ]
+  },
+  {
+    "id": "full-body-advanced",
+    "name": "Full Body Advanced",
+    "icon": "🔬",
+    "description": "Complete health evaluation with additional hormone & vitamin tests.",
+    "price": 1499,
+    "featured": true,
+    "badge": "⭐ Popular",
+    "tests": [
+      "Everything in Basic",
+      "Thyroid Profile (TSH, T3, T4)",
+      "HbA1c (Diabetes Control)",
+      "Vitamin B12 & D3",
+      "Uric Acid",
+      "Iron Studies",
+      "Chest X-Ray"
+    ]
+  },
+  {
+    "id": "diabetes-care",
+    "name": "Diabetes Care",
+    "icon": "🩸",
+    "description": "Detailed monitoring package for diabetics & high-risk individuals.",
+    "price": 699,
+    "featured": false,
+    "badge": null,
+    "tests": [
+      "Fasting & PP Blood Sugar",
+      "HbA1c",
+      "Kidney Function Test",
+      "Urine Microalbumin",
+      "Lipid Profile"
+    ]
+  },
+  {
+    "id": "thyroid-hormones",
+    "name": "Thyroid & Hormones",
+    "icon": "⚗️",
+    "description": "Comprehensive hormonal assessment for thyroid disorders & imbalances.",
+    "price": 899,
+    "featured": false,
+    "badge": null,
+    "tests": [
+      "TSH, T3, T4",
+      "Anti-TPO Antibodies",
+      "FSH & LH",
+      "Prolactin",
+      "Testosterone / Estrogen"
+    ]
+  },
+  {
+    "id": "heart-health",
+    "name": "Heart Health",
+    "icon": "❤️",
+    "description": "Cardiac risk assessment for preventive heart care.",
+    "price": 999,
+    "featured": false,
+    "badge": null,
+    "tests": [
+      "Lipid Profile (Full)",
+      "hs-CRP",
+      "Homocysteine",
+      "ECG",
+      "Blood Pressure Screening",
+      "Blood Sugar"
+    ]
+  },
+  {
+    "id": "womens-wellness",
+    "name": "Women's Wellness",
+    "icon": "🌸",
+    "description": "Designed specifically for women's health needs at every life stage.",
+    "price": 1199,
+    "featured": false,
+    "badge": null,
+    "tests": [
+      "CBC & Blood Sugar",
+      "Thyroid Profile",
+      "Vitamin B12 & D3",
+      "Iron Studies (Ferritin)",
+      "FSH, LH, Prolactin",
+      "Pap Smear (optional)"
+    ]
+  },
+  {
+    "id": "senior-citizen",
+    "name": "Senior Citizen",
+    "icon": "🧓",
+    "description": "Tailored screening for age-related conditions in adults 60+.",
+    "price": 1299,
+    "featured": false,
+    "badge": null,
+    "tests": [
+      "Full Blood Count",
+      "Blood Sugar & HbA1c",
+      "Kidney & Liver Function",
+      "Vitamin D & B12",
+      "Bone Profile (Calcium)",
+      "PSA / CA-125 (optional)"
+    ]
+  },
+  {
+    "id": "pre-employment",
+    "name": "Pre-Employment",
+    "icon": "💼",
+    "description": "Standard tests required for employment medical fitness certificates.",
+    "price": 499,
+    "featured": false,
+    "badge": null,
+    "tests": [
+      "CBC",
+      "Blood Group & RH Typing",
+      "Blood Sugar",
+      "Urine Routine",
+      "Chest X-Ray",
+      "Eye & BP Screening"
+    ]
+  },
+  {
+    "id": "individual-tests",
+    "name": "Individual Tests",
+    "icon": "🧪",
+    "description": "Book any single test — CBC, LFT, KFT, Urine, Lipid Profile & more.",
+    "price": 80,
+    "priceLabel": "₹80+ / test",
+    "featured": false,
+    "badge": null,
+    "tests": [
+      "CBC – ₹150",
+      "Blood Sugar (F/PP) – ₹80",
+      "Lipid Profile – ₹350",
+      "Thyroid (TSH) – ₹250",
+      "Urine Routine – ₹100",
+      "& many more…"
+    ]
   }
 ]
