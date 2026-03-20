@@ -367,6 +367,10 @@
   </div>
 
   <script>
+    // ── Config ────────────────────────────────────────────────────────
+    const FORM_BASE_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform';
+    const FORM_ENTRY_ID = 'entry.1108373458'; // pre-fills the package name field
+
     // ── Modal state ───────────────────────────────────────────────────
     const overlay   = document.getElementById('modal-overlay');
     const modalBody = document.getElementById('modal-body');
@@ -387,34 +391,17 @@
       if (old) old.remove();
       loader.classList.remove('hidden');
 
-      const url = pkg.bookingFormUrl || '';
+      // Build pre-filled + embedded URL
+      // entry.1108373458 maps to the "Which package?" field in the form
+      const embedUrl = `${FORM_BASE_URL}?${FORM_ENTRY_ID}=${encodeURIComponent(pkg.name)}&embedded=true`;
 
-      if (!url || url.includes('REPLACE_')) {
-        // No real URL configured yet — show friendly message
-        loader.classList.add('hidden');
-        const msg = document.createElement('div');
-        msg.className = 'modal-no-form';
-        msg.innerHTML = `
-          <div class="big-icon">📋</div>
-          <p><strong>Form not configured yet.</strong><br>
-          Open <code>packages.json</code> and set the<br>
-          <code>bookingFormUrl</code> for <strong>${escHtml(pkg.name)}</strong>.</p>`;
-        modalBody.appendChild(msg);
-      } else {
-        // Embed the Google Form in an iframe
-        // Google Forms needs ?embedded=true to render cleanly in iframes
-        const embedUrl = url.includes('?')
-          ? url + '&embedded=true'
-          : url + '?embedded=true';
-
-        const iframe = document.createElement('iframe');
-        iframe.className    = 'modal-iframe';
-        iframe.src          = embedUrl;
-        iframe.title        = `Book ${pkg.name}`;
-        iframe.allow        = 'camera; microphone';
-        iframe.onload       = () => loader.classList.add('hidden');
-        modalBody.appendChild(iframe);
-      }
+      const iframe = document.createElement('iframe');
+      iframe.className = 'modal-iframe';
+      iframe.src       = embedUrl;
+      iframe.title     = `Book ${pkg.name}`;
+      iframe.allow     = 'camera; microphone';
+      iframe.onload    = () => loader.classList.add('hidden');
+      modalBody.appendChild(iframe);
 
       // Show overlay
       overlay.classList.add('open');
