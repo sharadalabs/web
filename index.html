@@ -28,15 +28,7 @@
     body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
     /* ── NAV ── */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(247,245,240,0.93);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 20px;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px;
-    }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(247,245,240,0.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .nav-logo { display: flex; align-items: center; gap: 10px; }
     .nav-logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
     .nav-logo-icon svg { width: 22px; height: 22px; fill: white; }
@@ -73,7 +65,6 @@
 
     /* ── PACKAGES ── */
     #packages { background: var(--surface); }
-
     .packages-loading { display: grid; grid-template-columns: 1fr; gap: 16px; }
     @media (min-width: 600px) { .packages-loading { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 900px) { .packages-loading { grid-template-columns: repeat(3, 1fr); } }
@@ -103,7 +94,7 @@
     .package-card.featured .package-footer { border-top-color: rgba(26,92,58,0.2); }
     .package-price { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--green); }
     .package-price span { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: var(--muted); font-weight: 400; }
-    .btn-book { background: var(--green); color: white; border: none; padding: 9px 18px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
+    .btn-book { background: var(--green); color: white; border: none; padding: 9px 18px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.15s; display: inline-block; }
     .btn-book:hover { background: var(--green-mid); transform: scale(1.04); }
 
     .packages-error { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 0.95rem; }
@@ -136,101 +127,85 @@
     footer strong { color: rgba(255,255,255,0.8); }
 
     /* ── FLOATING BUTTON ── */
-    .float-book { display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 200; background: var(--green); color: white; padding: 14px 36px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; text-decoration: none; box-shadow: 0 8px 28px rgba(26,92,58,0.45); white-space: nowrap; animation: bounce-in 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.8s both; cursor: pointer; border: none; }
+    .float-book { display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 200; background: var(--green); color: white; padding: 14px 36px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1rem; border: none; box-shadow: 0 8px 28px rgba(26,92,58,0.45); white-space: nowrap; cursor: pointer; animation: bounce-in 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.8s both; }
     @keyframes bounce-in { from { opacity: 0; transform: translateX(-50%) translateY(30px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
     @media (max-width: 640px) { .float-book { display: block; } }
 
     /* ── MODAL ── */
     .modal-overlay {
       position: fixed; inset: 0; z-index: 1000;
-      background: rgba(10, 30, 18, 0.6);
+      background: rgba(10,30,18,0.6);
       backdrop-filter: blur(4px);
       display: flex; align-items: flex-end; justify-content: center;
       opacity: 0; pointer-events: none;
       transition: opacity 0.25s ease;
     }
-    @media (min-width: 640px) {
-      .modal-overlay { align-items: center; }
-    }
+    @media (min-width: 640px) { .modal-overlay { align-items: center; } }
     .modal-overlay.open { opacity: 1; pointer-events: all; }
 
     .modal {
       background: var(--surface);
-      width: 100%;
-      max-width: 560px;
+      width: 100%; max-width: 480px;
       border-radius: 24px 24px 0 0;
       overflow: hidden;
       display: flex; flex-direction: column;
-      max-height: 92vh;
+      max-height: 90vh;
       transform: translateY(40px);
-      transition: transform 0.3s cubic-bezier(0.34, 1.2, 0.64, 1);
+      transition: transform 0.3s cubic-bezier(0.34,1.2,0.64,1);
       box-shadow: 0 -8px 48px rgba(0,0,0,0.18);
     }
-    @media (min-width: 640px) {
-      .modal { border-radius: 24px; max-height: 88vh; transform: translateY(20px) scale(0.97); }
-    }
+    @media (min-width: 640px) { .modal { border-radius: 24px; transform: translateY(16px) scale(0.97); } }
     .modal-overlay.open .modal { transform: translateY(0) scale(1); }
 
+    /* Modal header */
     .modal-header {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 20px 14px;
+      padding: 18px 20px 16px;
       border-bottom: 1px solid var(--border);
       flex-shrink: 0;
     }
     .modal-header-left { display: flex; align-items: center; gap: 12px; }
-    .modal-pkg-icon { font-size: 1.5rem; width: 44px; height: 44px; background: var(--green-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+    .modal-pkg-icon { font-size: 1.4rem; width: 44px; height: 44px; background: var(--green-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
     .modal-pkg-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--green); font-weight: 600; line-height: 1.2; }
-    .modal-pkg-sub { font-size: 0.75rem; color: var(--muted); margin-top: 1px; }
-
-    .modal-close {
-      width: 34px; height: 34px;
-      background: var(--bg); border: 1px solid var(--border);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      cursor: pointer; font-size: 1rem; color: var(--muted);
-      transition: background 0.15s, color 0.15s;
-      flex-shrink: 0;
-    }
+    .modal-pkg-price { font-size: 0.8rem; color: var(--muted); margin-top: 2px; font-weight: 500; }
+    .modal-close { width: 34px; height: 34px; background: var(--bg); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1rem; color: var(--muted); transition: background 0.15s; flex-shrink: 0; }
     .modal-close:hover { background: #f0e8e0; color: var(--text); }
 
-    /* Iframe loading state */
+    /* Modal scrollable body */
     .modal-body {
-      flex: 1; overflow: hidden; position: relative;
-      min-height: 300px;
+      overflow-y: auto; padding: 20px;
+      display: flex; flex-direction: column; gap: 16px;
     }
 
-    .modal-loader {
-      position: absolute; inset: 0;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 14px; background: var(--surface); z-index: 2;
-      transition: opacity 0.3s;
-    }
-    .modal-loader.hidden { opacity: 0; pointer-events: none; }
+    /* Tests list inside modal */
+    .modal-section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .modal-tests { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .modal-tests li { font-size: 0.85rem; color: #374151; padding: 8px 12px 8px 36px; background: var(--bg); border-radius: 8px; position: relative; }
+    .modal-tests li::before { content: '✓'; position: absolute; left: 12px; color: var(--green); font-weight: 700; }
 
-    .spinner {
-      width: 36px; height: 36px;
-      border: 3px solid var(--green-light);
-      border-top-color: var(--green);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+    /* Price summary */
+    .modal-price-box {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--green-light); border: 1px solid rgba(26,92,58,0.15);
+      border-radius: 12px; padding: 14px 16px;
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .modal-loader p { font-size: 0.85rem; color: var(--muted); }
+    .modal-price-box-label { font-size: 0.82rem; color: var(--green); font-weight: 500; }
+    .modal-price-box-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--green); }
 
-    .modal-iframe {
-      width: 100%; height: 100%;
-      border: none;
-      display: block;
-      min-height: 480px;
+    /* CTA button */
+    .btn-open-form {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--green); color: white; border: none;
+      padding: 16px 24px; border-radius: 50px; width: 100%;
+      font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 700;
+      cursor: pointer; text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(26,92,58,0.25);
     }
+    .btn-open-form:hover { background: var(--green-mid); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(26,92,58,0.3); }
+    .btn-open-form svg { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
 
-    /* No-form fallback */
-    .modal-no-form {
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 12px; padding: 40px 24px; text-align: center;
-    }
-    .modal-no-form .big-icon { font-size: 2.5rem; }
-    .modal-no-form p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-    .modal-no-form code { background: var(--bg); padding: 2px 8px; border-radius: 6px; font-size: 0.82rem; color: var(--green); }
+    .modal-note { text-align: center; font-size: 0.73rem; color: var(--muted); line-height: 1.5; }
 
     /* ── ANIMATIONS ── */
     .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
@@ -337,73 +312,86 @@
     <p style="margin-top:6px;">Reports are for diagnostic purposes only. Please consult your physician for medical advice.</p>
   </footer>
 
-  <!-- FLOATING BUTTON (mobile) -->
+  <!-- FLOATING BUTTON -->
   <button class="float-book" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">
     📅 Book Appointment
   </button>
 
   <!-- ── BOOKING MODAL ── -->
-  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-pkg-name">
-    <div class="modal" id="modal">
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal">
+
+      <!-- Header -->
       <div class="modal-header">
         <div class="modal-header-left">
           <div class="modal-pkg-icon" id="modal-pkg-icon">🧪</div>
           <div>
-            <div class="modal-pkg-name" id="modal-pkg-name">Book Appointment</div>
-            <div class="modal-pkg-sub" id="modal-pkg-sub">Fill in your details below</div>
+            <div class="modal-pkg-name" id="modal-pkg-name">Package</div>
+            <div class="modal-pkg-price" id="modal-pkg-price"></div>
           </div>
         </div>
         <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
       </div>
-      <div class="modal-body" id="modal-body">
-        <!-- Spinner shown while iframe loads -->
-        <div class="modal-loader" id="modal-loader">
-          <div class="spinner"></div>
-          <p>Loading booking form…</p>
+
+      <!-- Scrollable body -->
+      <div class="modal-body">
+        <!-- Tests included -->
+        <div>
+          <div class="modal-section-label">Tests Included</div>
+          <ul class="modal-tests" id="modal-tests"></ul>
         </div>
-        <!-- iframe injected by JS -->
+
+        <!-- Price -->
+        <div class="modal-price-box">
+          <div class="modal-price-box-label">Package Price</div>
+          <div class="modal-price-box-value" id="modal-price-value"></div>
+        </div>
+
+        <!-- CTA — opens pre-filled Google Form in new tab -->
+        <a class="btn-open-form" id="modal-form-btn" href="#" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14V3zM5 5h6V3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5V5z"/></svg>
+          Fill Booking Form
+        </a>
+
+        <p class="modal-note">
+          The form will open with your package pre-selected.<br>
+          Just fill in your name, phone & preferred date.
+        </p>
       </div>
     </div>
   </div>
 
   <script>
-    // ── Config ────────────────────────────────────────────────────────
+    // ── Google Form config ────────────────────────────────────────────
+    // To update the form URL or field ID, change only these two lines:
     const FORM_BASE_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSff8zPeR_A20voDAf_KQ7VVHJOoVf9l-u48GSG3S27pqHXmxA/viewform';
-    const FORM_ENTRY_ID = 'entry.1108373458'; // pre-fills the package name field
+    const FORM_ENTRY_ID = 'entry.1108373458'; // maps to "Which package?" field
 
-    // ── Modal state ───────────────────────────────────────────────────
-    const overlay   = document.getElementById('modal-overlay');
-    const modalBody = document.getElementById('modal-body');
-    const loader    = document.getElementById('modal-loader');
-    const closeBtn  = document.getElementById('modal-close');
+    // ── Modal ─────────────────────────────────────────────────────────
+    const overlay  = document.getElementById('modal-overlay');
+    const closeBtn = document.getElementById('modal-close');
 
     function openModal(pkg) {
-      // Set header info
-      document.getElementById('modal-pkg-icon').textContent = pkg.icon || '🧪';
-      document.getElementById('modal-pkg-name').textContent = pkg.name;
-      document.getElementById('modal-pkg-sub').textContent  =
-        pkg.priceLabel
-          ? pkg.priceLabel
-          : `₹${Number(pkg.price).toLocaleString('en-IN')} / person`;
+      document.getElementById('modal-pkg-icon').textContent  = pkg.icon || '🧪';
+      document.getElementById('modal-pkg-name').textContent  = pkg.name;
 
-      // Clear previous iframe
-      const old = modalBody.querySelector('iframe, .modal-no-form');
-      if (old) old.remove();
-      loader.classList.remove('hidden');
+      const priceStr = pkg.priceLabel
+        ? pkg.priceLabel
+        : `₹${Number(pkg.price).toLocaleString('en-IN')} / person`;
 
-      // Build pre-filled + embedded URL
-      // entry.1108373458 maps to the "Which package?" field in the form
-      const embedUrl = `${FORM_BASE_URL}?${FORM_ENTRY_ID}=${encodeURIComponent(pkg.name)}&embedded=true`;
+      document.getElementById('modal-pkg-price').textContent    = priceStr;
+      document.getElementById('modal-price-value').textContent  = priceStr;
 
-      const iframe = document.createElement('iframe');
-      iframe.className = 'modal-iframe';
-      iframe.src       = embedUrl;
-      iframe.title     = `Book ${pkg.name}`;
-      iframe.allow     = 'camera; microphone';
-      iframe.onload    = () => loader.classList.add('hidden');
-      modalBody.appendChild(iframe);
+      // Render tests list
+      const testsList = document.getElementById('modal-tests');
+      testsList.innerHTML = (pkg.tests || [])
+        .map(t => `<li>${escHtml(t)}</li>`)
+        .join('');
 
-      // Show overlay
+      // Build pre-filled URL — usp=pp_url activates pre-fill on Google's side
+      const prefilledUrl = `${FORM_BASE_URL}?usp=pp_url&${FORM_ENTRY_ID}=${encodeURIComponent(pkg.name)}`;
+      document.getElementById('modal-form-btn').href = prefilledUrl;
+
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
@@ -411,19 +399,13 @@
     function closeModal() {
       overlay.classList.remove('open');
       document.body.style.overflow = '';
-      // Small delay before clearing so animation completes
-      setTimeout(() => {
-        const old = modalBody.querySelector('iframe, .modal-no-form');
-        if (old) old.remove();
-        loader.classList.remove('hidden');
-      }, 300);
     }
 
     closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-    // ── Load & render packages ────────────────────────────────────────
+    // ── Load packages ─────────────────────────────────────────────────
     async function loadPackages() {
       try {
         const res = await fetch('packages.json');
@@ -433,7 +415,7 @@
       } catch (err) {
         document.getElementById('packages-loading').style.display = 'none';
         document.getElementById('packages-error').style.display   = 'block';
-        console.error('packages.json load error:', err);
+        console.error('packages.json error:', err);
       }
     }
 
@@ -445,9 +427,8 @@
         const priceHtml = pkg.priceLabel
           ? pkg.priceLabel
           : `₹${Number(pkg.price).toLocaleString('en-IN')} <span>/ person</span>`;
-        const badgeHtml = pkg.badge
-          ? `<div class="package-badge">${escHtml(pkg.badge)}</div>` : '';
-        const testsHtml = (pkg.tests || []).map(t => `<li>${escHtml(t)}</li>`).join('');
+        const badgeHtml  = pkg.badge ? `<div class="package-badge">${escHtml(pkg.badge)}</div>` : '';
+        const testsHtml  = (pkg.tests || []).map(t => `<li>${escHtml(t)}</li>`).join('');
 
         return `
           <div class="package-card ${pkg.featured ? 'featured' : ''} fade-up">
@@ -463,12 +444,10 @@
           </div>`;
       }).join('');
 
-      // Single event listener via delegation
-      grid.addEventListener('click', (e) => {
+      grid.addEventListener('click', e => {
         const btn = e.target.closest('.btn-book');
         if (!btn) return;
-        const pkg = packages[parseInt(btn.dataset.idx, 10)];
-        if (pkg) openModal(pkg);
+        openModal(packages[parseInt(btn.dataset.idx, 10)]);
       });
 
       loader.style.display = 'none';
@@ -477,18 +456,16 @@
     }
 
     // ── Helpers ───────────────────────────────────────────────────────
-    function escHtml(str) {
-      return String(str)
-        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    function escHtml(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
 
     function observeFadeUps() {
       const io = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add('visible'), i * 70);
-            io.unobserve(entry.target);
+        entries.forEach((e, i) => {
+          if (e.isIntersecting) {
+            setTimeout(() => e.target.classList.add('visible'), i * 70);
+            io.unobserve(e.target);
           }
         });
       }, { threshold: 0.08 });
